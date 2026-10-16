@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>هدية صغيرة لرشا 💗</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+  min-height: 100vh;
+  font-family: 'Cairo', sans-serif;
+  color: #ffe6f4;
+  background:
+    radial-gradient(ellipse at 50% 35%, #43102f 0%, transparent 48%),
+    radial-gradient(ellipse at 10% 90%, #250b28 0%, transparent 45%),
+    linear-gradient(135deg, #08060d, #160916, #08060d);
+  overflow-x: hidden;
+}
+
+    .background-hearts {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .floating-heart {
+      position: absolute;
+      bottom: -60px;
+      color: #ff4da6;
+text-shadow: 0 0 12px #ff1493, 0 0 28px #ff1493;
+      opacity: 0.45;
+      animation: floatUp linear infinite;
+    }
+
+    .floating-heart:nth-child(1) {
+      left: 8%;
+      font-size: 25px;
+      animation-duration: 11s;
+    }
+
+    .floating-heart:nth-child(2) {
+      left: 25%;
+      font-size: 35px;
+      animation-duration: 14s;
+      animation-delay: 2s;
+    }
+
+    .floating-heart:nth-child(3) {
+      left: 48%;
+      font-size: 20px;
+      animation-duration: 10s;
+      animation-delay: 4s;
+    }
+
+    .floating-heart:nth-child(4) {
+      left: 70%;
+      font-size: 32px;
+      animation-duration: 13s;
+      animation-delay: 1s;
+    }
+
+    .floating-heart:nth-child(5) {
+      left: 90%;
+      font-size: 28px;
+      animation-duration: 12s;
+      animation-delay: 3s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 18px;
+    }
+
+    .tag {
+  background: rgba(255, 20, 147, 0.08);
+  border: 1px solid rgba(255, 105, 180, 0.45);
+  color: #ffb8dc;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px #ff149322;
+  backdrop-filter: blur(12px);
+}
+
+    h1 {
+  font-size: clamp(25px, 5vw, 43px);
+  font-weight: 800;
+  color: #ff75bd;
+  margin-bottom: 8px;
+  text-shadow:
+    0 0 8px #ff1493,
+    0 0 22px #ff149388,
+    0 0 45px #ff149344;
+}
+    .subtitle {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 500px;
+  color: #e8b8d2;
+}
+
+    .heart {
+      width: 280px;
+      height: 280px;
+      max-width: 90vw;
+      margin: 5px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 12px 24px #e85a9a40);
+    }
+
+    #heartCanvas {
+      display: block;
+      width: 260px;
+      height: 260px;
+      max-width: 90vw;
+      max-height: 90vw;
+      outline: none;
+    }
+
+    .message {
+  max-width: 490px;
+  padding: 18px 22px;
+  margin: 4px 0 22px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #ffe6f4;
+  border: 1px solid rgba(255, 105, 180, 0.25);
+  border-radius: 22px;
+  line-height: 2;
+  box-shadow:
+    0 0 25px #ff149315,
+    inset 0 0 20px #ff149308;
+  backdrop-filter: blur(14px);
+  font-size: 15px;
+}
+
+    .main-button {
+  border: 1px solid #ff9bd0;
+  border-radius: 35px;
+  padding: 14px 28px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff5aab, #c90070);
+  box-shadow:
+    0 0 12px #ff149377,
+    0 0 30px #ff149344;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.main-button:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 0 18px #ff1493,
+    0 0 45px #ff149388;
+}
+    .main-button:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 13px 30px #d94f9160;
+    }
+
+    .footer {
+      margin-top: 25px;
+      color: #ad7791;
+      font-size: 12px;
+    }
+
+    .surprise {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(5, 2, 10, 0.88);
+  backdrop-filter: blur(14px);
+}
+
+.surprise.show {
+  display: flex;
+  animation: fadeIn 0.4s ease;
+}
+
+    .surprise.show {
+      display: flex;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .surprise-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 24px;
+  text-align: center;
+  border-radius: 28px;
+  color: #ffe6f4;
+  background:
+    radial-gradient(ellipse at top, #42112f 0%, transparent 65%),
+    linear-gradient(145deg, #170b19, #09070e);
+  border: 1px solid #ff5aab88;
+  box-shadow:
+    0 0 20px #ff149344,
+    0 0 60px #ff149322,
+    inset 0 0 25px #ff14930d;
+  animation: popIn 0.45s ease;
+}
+
+.surprise-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: magicBox 0.8s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes magicBox {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-25deg) rotateY(15deg) scale(0.5);
+    filter: blur(12px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(5deg) rotateY(-4deg) scale(1.04);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) rotateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+    .surprise-card .big-heart {
+      font-size: 58px;
+      animation: heartbeat 1.2s infinite;
+    }
+
+    .surprise-card h2 {
+  color: #ff75bd;
+  font-size: 27px;
+  margin: 10px 0;
+  text-shadow:
+    0 0 10px #ff1493,
+    0 0 25px #ff149366;
+}
+
+    .surprise-card p {
+  line-height: 2.1;
+  margin-bottom: 22px;
+  font-size: 15px;
+  color: #ffb8dc;
+  text-shadow: 0 0 8px #ff149322;
+}
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.14); }
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 24px 15px;
+      }
+
+      .heart {
+        height: 245px;
+      }
+
+      #heartCanvas {
+        width: 240px;
+        height: 240px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+    }
+    
+.gift-box {
+  position: relative;
+  width: 130px;
+  height: 105px;
+  margin: 20px auto 32px;
+  background: linear-gradient(135deg, #ff75bd, #c90070);
+  border: 1px solid #ffb8dc;
+  border-radius: 8px 8px 14px 14px;
+  box-shadow: 0 0 20px #ff1493, 0 0 45px #ff149366;
+  animation: giftFloat 2s ease-in-out infinite;
+}
+
+.gift-lid {
+  position: absolute;
+  z-index: 2;
+  width: 144px;
+  height: 25px;
+  left: -8px;
+  top: -15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffb8dc, #ff1493);
+  border: 1px solid #ffd8eb;
+  transform-origin: left bottom;
+  animation: giftOpen 2.5s ease-in-out infinite;
+}
+
+.gift-ribbon {
+  position: absolute;
+  left: 52px;
+  top: 0;
+  width: 25px;
+  height: 100%;
+  background: linear-gradient(90deg, #fff0f8, #ff9bd0);
+  box-shadow: 0 0 12px #fff;
+}
+
+.gift-bow {
+  position: absolute;
+  z-index: 3;
+  top: -39px;
+  left: 42px;
+  font-size: 35px;
+  filter: drop-shadow(0 0 8px #ff1493);
+  animation: bowGlow 1.5s ease-in-out infinite alternate;
+}
+
+.gift-front {
+  position: absolute;
+  top: 35px;
+  left: 45px;
+  font-size: 34px;
+  filter: drop-shadow(0 0 10px #ff1493);
+}
+
+@keyframes giftFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-9px) rotate(2deg); }
+}
+
+@keyframes giftOpen {
+  0%, 35%, 100% { transform: rotate(0); }
+  55%, 80% { transform: rotate(-28deg) translateY(-8px); }
+}
+
+@keyframes bowGlow {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
+#magicWorld:not([hidden]) {
+  animation: magicalEntrance 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+
+@keyframes magicalEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(.65) translateY(35px);
+    filter: blur(15px);
+    box-shadow: 0 0 0 #ff1493;
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-5px);
+    filter: blur(0);
+    box-shadow: 0 0 65px #ff149366;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+    box-shadow: 0 0 40px #ff149344;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<div id="passwordGate" style="position:fixed;inset:0;z-index:999999;background:radial-gradient(circle,#35102b,#08060d 75%);display:flex;align-items:center;justify-content:center;padding:20px;">
+  <div style="width:100%;max-width:360px;text-align:center;padding:30px 20px;border:1px solid #ff4da6;border-radius:25px;background:#120914;box-shadow:0 0 35px #ff149355;color:#ffe6f4;font-family:Cairo,sans-serif;">
+    <div style="font-size:65px;">🔐</div>
+    <h2 style="color:#ff75bd;">عالم رشا السري 💗</h2>
+    <p>دخلي كلمة السر باش تفتحي عالمكِ السحري ✨</p>
+    <input id="rashaPassword" type="password" placeholder="كلمة السر..." style="box-sizing:border-box;width:100%;padding:14px;border:1px solid #ff4da6;border-radius:12px;background:#08060d;color:white;text-align:center;font-size:20px;outline:none;">
+    <button id="unlockRasha" style="width:100%;margin-top:15px;padding:13px;border:0;border-radius:15px;background:linear-gradient(135deg,#ff5aab,#8e0755);color:white;font-size:17px;cursor:pointer;">افتحي عالمكِ 💖</button>
+    <p id="passwordError" style="color:#ff75bd;min-height:24px;"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  const gate = document.getElementById("passwordGate");
+  const input = document.getElementById("rashaPassword");
+  const button = document.getElementById("unlockRasha");
+  const error = document.getElementById("passwordError");
+
+  function unlock() {
+    if (input.value === "1126") {
+      gate.style.display = "none";
+    } else {
+      error.textContent = "كلمة السر غير صحيحة، عاودي المحاولة 💗";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  button.addEventListener("click", unlock);
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") unlock();
+  });
+})();
+</script>
+
+  <div class="background-hearts" aria-hidden="true">
+    <span class="floating-heart">💗</span>
+    <span class="floating-heart">♡</span>
+    <span class="floating-heart">💕</span>
+    <span class="floating-heart">💖</span>
+    <span class="floating-heart">♡</span>
+  </div>
+
+  <main class="container">
+    <div class="tag">🎀 هدية صغيرة من القلب 🎀</div>
+
+    <h1>عالمي الصغير لأجلكِ يا رشا</h1>
+
+    <p class="subtitle">
+      لأن بعض الأشخاص يجعلون العالم أجمل بمجرد وجودهم 💕
+    </p>
+
+    <div class="heart">
+      <canvas id="heartCanvas" width="260" height="260">
+        💗
+      </canvas>
+    </div>
+
+    <div class="message">
+      يا رشا، حبيت نصنعلك حاجة مميزة، حاجة صغيرة
+      فيها شوية من الإبداع وكثير من المحبة.
+      <br>
+      نتمنى هذي الهدية ترسم ابتسامة على وجهكِ. 🌸
+    </div>
+
+    <button class="main-button" id="openButton">
+      افتحي عالمكِ الصغير 💌
+    </button>
+
+    <div class="footer">
+      صُنعت بكل حب من أجلكِ يا رشا 💗
+    </div>
+    
+<div class="typing-message">
+  <span class="typing-label">رسالة صغيرة لقلبكِ ✨</span>
+  <p id="typingText"></p>
+  <span class="typing-cursor"></span>
+</div>
+
+<div class="love-counter">
+  <span class="counter-label">رسالة من القلب 💗</span>
+  <div class="counter-number" id="loveCounter">01</div>
+  <p class="counter-caption" id="counterCaption">
+    كل يوم فرصة جديدة للفرح ✨
+  </p>
+</div>
+
+  </main>
+
+  <div class="surprise" id="surprise">
+    <div class="surprise-card">
+      <div class="big-heart">💗</div>
+
+<div class="gift-box" aria-label="صندوق هدية سحري">
+  <div class="gift-lid"></div>
+  <div class="gift-ribbon"></div>
+  <div class="gift-bow">🎀</div>
+  <div class="gift-front">💗</div>
+</div>
+
+      <h2>إلى رشا الجميلة</h2>
+
+      <p>
+        بعض الهدايا ليست قيمتها في حجمها،
+        بل في المشاعر التي تحملها.
+        <br>
+        حبيت تكون عندكِ صفحة صغيرة،
+        كلما فتحتيها تلقاي فيها الوردي والقلوب
+        وابتسامة تستاهليها. 🌷
+        <br>
+        <strong>أتمنى لكِ أيامًا جميلة تشبه قلبكِ.</strong>
+      </p>
+
+      <button class="main-button" id="closeButton">
+        نرجع لعالمي 💕
+      </button>
+    </div>
+  </div>
+
+  <!-- مكتبة Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+
+  <script>
+    // أزرار المفاجأة
+    const openButton = document.getElementById("openButton");
+    const closeButton = document.getElementById("closeButton");
+    const surprise = document.getElementById("surprise");
+
+    openButton.addEventListener("click", function () {
+  surprise.classList.add("show");
+
+  // إطلاق القلوب والنجيمات
+  const symbols = ["💗", "💕", "💖", "✨", "♡"];
+
+  for (let i = 0; i < 35; i++) {
+    const particle = document.createElement("span");
+
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    particle.style.position = "fixed";
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.top = (35 + Math.random() * 45) + "vh";
+    particle.style.fontSize = (16 + Math.random() * 22) + "px";
+    particle.style.pointerEvents = "none";
+    particle.style.zIndex = "20";
+    particle.style.filter =
+      "drop-shadow(0 0 8px #ff1493)";
+
+    document.body.appendChild(particle);
+
+    const drift = (Math.random() - 0.5) * 240;
+    const duration = 1200 + Math.random() * 1800;
+
+    const animation = particle.animate(
+      [
+        {
+          transform: "translate(0, 0) scale(0.3) rotate(0deg)",
+          opacity: 0
+        },
+        {
+          transform: "translate(" + drift * 0.3 + "px, -100px) scale(1.2) rotate(100deg)",
+          opacity: 1,
+          offset: 0.3
+        },
+        {
+          transform: "translate(" + drift + "px, -280px) scale(0.2) rotate(300deg)",
+          opacity: 0
+        }
+      ],
+      {
+        duration: duration,
+        easing: "ease-out"
+      }
+    );
+
+    animation.onfinish = function () {
+      particle.remove();
+    };
+  }
+});
+
+    closeButton.addEventListener("click", function () {
+      surprise.classList.remove("show");
+    });
+
+    surprise.addEventListener("click", function (event) {
+      if (event.target === surprise) {
+        surprise.classList.remove("show");
+      }
+    });
+
+    // إنشاء القلب ثلاثي الأبعاد
+    const canvas3D = document.getElementById("heartCanvas");
+
+    if (window.THREE && canvas3D) {
+      const scene3D = new THREE.Scene();
+
+      const camera3D = new THREE.PerspectiveCamera(
+        35,
+        1,
+        0.1,
+        100
+      );
+
+      camera3D.position.z = 7;
+
+      const renderer3D = new THREE.WebGLRenderer({
+        canvas: canvas3D,
+        alpha: true,
+        antialias: true
+      });
+
+      renderer3D.setPixelRatio(
+        Math.min(window.devicePixelRatio || 1, 2)
+      );
+
+      const shape = new THREE.Shape();
+
+      shape.moveTo(0, -0.9);
+
+      shape.bezierCurveTo(
+        -0.3, -0.55,
+        -1.5, 0.25,
+        -1.5, 1.05
+      );
+
+      shape.bezierCurveTo(
+        -1.5, 1.95,
+        -0.35, 2.05,
+        0, 1.25
+      );
+
+      shape.bezierCurveTo(
+        0.35, 2.05,
+        1.5, 1.95,
+        1.5, 1.05
+      );
+
+      shape.bezierCurveTo(
+        1.5, 0.25,
+        0.3, -0.55,
+        0, -0.9
+      );
+
+      const geometry = new THREE.ExtrudeGeometry(shape, {
+        depth: 0.55,
+        bevelEnabled: true,
+        bevelSegments: 5,
+        steps: 1,
+        bevelSize: 0.12,
+        bevelThickness: 0.12,
+        curveSegments: 24
+      });
+
+      geometry.center();
+
+      // مادة وردية واضحة لا تتحول إلى الأبيض بسبب الإضاءة
+      const material = new THREE.MeshBasicMaterial({
+        color: 0xff1493,
+        side: THREE.DoubleSide
+      });
+
+      const heart3D = new THREE.Mesh(geometry, material);
+      scene3D.add(heart3D);
+
+      // نجوم وردية صغيرة حول القلب
+      const starCount = 180;
+      const starPositions = new Float32Array(starCount * 3);
+
+      for (let i = 0; i < starCount; i++) {
+        starPositions[i * 3] = (Math.random() - 0.5) * 8;
+        starPositions[i * 3 + 1] = (Math.random() - 0.5) * 7;
+        starPositions[i * 3 + 2] = (Math.random() - 0.5) * 3 - 1;
+      }
+
+      const starGeometry = new THREE.BufferGeometry();
+
+      starGeometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(starPositions, 3)
+      );
+
+      const starMaterial = new THREE.PointsMaterial({
+        color: 0xff9acb,
+        size: 0.035,
+        transparent: true,
+        opacity: 0.8
+      });
+
+      const stars = new THREE.Points(starGeometry, starMaterial);
+      scene3D.add(stars);
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      canvas3D.addEventListener("pointermove", function (event) {
+        const rect = canvas3D.getBoundingClientRect();
+
+        mouseX =
+          ((event.clientX - rect.left) / rect.width - 0.5) * 0.6;
+
+        mouseY =
+          ((event.clientY - rect.top) / rect.height - 0.5) * 0.4;
+      });
+
+      canvas3D.addEventListener("pointerleave", function () {
+        mouseX = 0;
+        mouseY = 0;
+      });
+
+      function resizeHeart() {
+        const width = canvas3D.clientWidth || 260;
+        const height = canvas3D.clientHeight || 260;
+
+        renderer3D.setSize(width, height, false);
+
+        camera3D.aspect = width / height;
+        camera3D.updateProjectionMatrix();
+      }
+
+      resizeHeart();
+      window.addEventListener("resize", resizeHeart);
+
+      function animateHeart() {
+        requestAnimationFrame(animateHeart);
+
+        heart3D.rotation.y += 0.012;
+
+        heart3D.rotation.y +=
+          (mouseX - heart3D.rotation.y) * 0.015;
+
+        heart3D.rotation.x +=
+          (-mouseY - heart3D.rotation.x) * 0.015;
+
+        heart3D.position.y =
+          -0.05 + Math.sin(Date.now() * 0.0015) * 0.12;
+
+        stars.rotation.y += 0.0008;
+
+        renderer3D.render(scene3D, camera3D);
+      }
+
+      animateHeart();
+
+    } else {
+      // يظهر هذا الرمز إذا لم يتم تحميل مكتبة Three.js
+      canvas3D.style.display = "none";
+
+      const fallback = document.createElement("div");
+      fallback.textContent = "💗";
+      fallback.style.fontSize = "150px";
+      fallback.style.animation = "heartbeat 1.2s infinite";
+
+      canvas3D.parentElement.appendChild(fallback);
+    }
+  </script>
+
+<div id="magic-sky" aria-hidden="true"></div>
+
+<style>
+#magic-sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sky-particle {
+  position: absolute;
+  bottom: -40px;
+  color: #ff4da6;
+  text-shadow: 0 0 10px #ff1493, 0 0 25px #ff1493;
+  animation: skyRise linear forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes skyRise {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(.5);
+    opacity: 0;
+  }
+  15% { opacity: 1; }
+  85% { opacity: .8; }
+  100% {
+    transform: translate3d(35px, -110vh, 0) rotate(300deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.typing-message {
+  width: min(490px, 90%);
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 22px;
+  text-align: center;
+  background: rgba(255, 20, 147, 0.06);
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  box-shadow: 0 0 25px #ff149322,
+              inset 0 0 20px #ff14930b;
+  backdrop-filter: blur(12px);
+}
+
+.typing-label {
+  display: block;
+  margin-bottom: 14px;
+  color: #ff75bd;
+  font-size: 17px;
+  font-weight: 800;
+  text-shadow: 0 0 12px #ff1493;
+}
+
+#typingText {
+  min-height: 60px;
+  margin: 0;
+  color: #ffe6f4;
+  font-size: 16px;
+  line-height: 2;
+  text-shadow: 0 0 8px #ff149322;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 19px;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: #ff4da6;
+  box-shadow: 0 0 12px #ff1493;
+  animation: cursorBlink 0.7s steps(2) infinite;
+}
+
+@keyframes cursorBlink {
+  to { opacity: 0; }
+}
+
+.love-counter {
+  width: min(350px, 88%);
+  margin: 24px auto;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 20, 147, .12),
+    rgba(20, 5, 20, .75)
+  );
+  border: 1px solid #ff5aab88;
+  box-shadow: 0 0 25px #ff149322,
+              inset 0 0 20px #ff149311;
+  backdrop-filter: blur(12px);
+}
+
+.counter-label {
+  color: #ffb8dc;
+  font-size: 15px;
+}
+
+.counter-number {
+  margin: 12px 0;
+  font-size: 62px;
+  font-weight: 900;
+  color: #ff75bd;
+  text-shadow: 0 0 10px #ff1493,
+               0 0 30px #ff149388;
+  animation: counterPulse 2s ease-in-out infinite;
+}
+
+.counter-caption {
+  margin: 0;
+  color: #ffe6f4;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@keyframes counterPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+</style>
+
+<script>
+(function () {
+  const sky = document.getElementById("magic-sky");
+  if (!sky) return;
+
+  const symbols = ["♡", "✦", "✧", "💗", "✨"];
+  let count = 0;
+
+  function createSkyParticle() {
+    if (count >= 35) return;
+    count++;
+
+    const particle = document.createElement("span");
+    particle.className = "sky-particle";
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.fontSize = (12 + Math.random() * 20) + "px";
+
+    const duration = 5 + Math.random() * 7;
+    particle.style.animationDuration = duration + "s";
+
+    sky.appendChild(particle);
+
+    setTimeout(function () {
+      particle.remove();
+      count--;
+    }, duration * 1000);
+  }
+
+  for (let i = 0; i < 18; i++) {
+    setTimeout(createSkyParticle, i * 250);
+  }
+
+  setInterval(createSkyParticle, 500);
+})();
+</script>
+
+<script>
+(function () {
+  const typingElement = document.getElementById("typingText");
+
+  if (!typingElement) return;
+
+  const message =
+    "رشا، كاين لحظات صغيرة تقدر تبدّل نهار كامل، وكاين كلمات بسيطة تقدر ترسم ابتسامة كبيرة. نتمنى ديما تلقاي الفرح في تفاصيل أيامك، وتبقى أحلامك تلمع كيما النجوم في السما. 💗✨";
+
+  let index = 0;
+
+  function typeNextCharacter() {
+    if (index < message.length) {
+      const character = message.charAt(index);
+      typingElement.textContent += character;
+      index++;
+
+      const delay = character === "،" || character === "." ? 350 : 65;
+      setTimeout(typeNextCharacter, delay);
+    }
+  }
+
+  typeNextCharacter();
+})();
+</script>
+
+<script>
+(function () {
+  const number = document.getElementById("loveCounter");
+  const caption = document.getElementById("counterCaption");
+
+  if (!number || !caption) return;
+
+  const messages = [
+    "كل يوم فرصة جديدة للفرح ✨",
+    "خلي ابتسامتك ديما منوّرة 💗",
+    "أحلام جميلة وأيام أجمل 🌸",
+    "تستاهلي كل حاجة تفرّح قلبك 💖"
+  ];
+
+  let current = 1;
+  let messageIndex = 0;
+
+  setInterval(function () {
+    current = current >= 99 ? 1 : current + 1;
+    number.textContent = String(current).padStart(2, "0");
+
+    messageIndex = (messageIndex + 1) % messages.length;
+    caption.textContent = messages[messageIndex];
+  }, 2500);
+})();
+</script>
+
+<section id="rasha-world">
+  <button id="enterWorld">✨ ادخلي عالم رشا السحري</button>
+
+  <div id="magicWorld" hidden>
+    <div id="worldStars" aria-hidden="true"></div>
+    <h2>💗 RASHA'S WORLD 💗</h2>
+    <p>عالم صغير، مليء بالمفاجآت السحرية</p>
+
+    <div class="magic-heart">💖</div>
+
+    <div class="magic-gifts">
+      <button class="magic-gift" data-message="🌸 يا رشا، نتمنالك أيام مليانة فرحة، وأحلام تتحقق، ونجوم تنوّر طريقك ✨💗">🎁</button>
+      <button class="magic-gift" data-message="💌 سرّ صغير يا رشا: وجودكِ يقدر يحوّل أبسط لحظة إلى ذكرى جميلة، ونتمنالك ديما الخير والفرح 💖✨">🎁</button>
+      <button class="magic-gift" data-message="💖✨ سحر رشا تفعّل! نتمنالك مستقبل مليان نجاح، ضحكات من القلب، ومفاجآت أجمل مما تتخيلي يا رشا 🌌💗">
+🎁
+</button>
+    </div>
+
+    <p id="worldMessage">اختاري هدية واكتشفي المفاجأة 🎀</p>
+    <button id="leaveWorld">العودة إلى البداية 🏠</button>
+  </div>
+</section>
+
+<style>
+#rasha-world {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  color: #ffe6f4;
+}
+
+#enterWorld, #leaveWorld, .magic-gift {
+  font-family: inherit;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ff9bd0;
+  background: linear-gradient(135deg, #ff5aab, #8e0755);
+  box-shadow: 0 0 20px #ff149366;
+  border-radius: 25px;
+  padding: 12px 20px;
+}
+
+#magicWorld {
+  margin: 20px auto;
+  max-width: 550px;
+  padding: 25px 15px;
+  border: 1px solid #ff5aab88;
+  border-radius: 28px;
+  background: radial-gradient(ellipse at center, #42112f, #09070e 75%);
+  box-shadow: 0 0 40px #ff149344;
+  animation: worldAppear .8s ease;
+}
+
+#magicWorld[hidden] {
+  display: none;
+}
+
+#magicWorld h2 {
+  color: #ff75bd;
+  text-shadow: 0 0 20px #ff1493;
+}
+
+.magic-heart {
+  font-size: 85px;
+  margin: 25px auto;
+  animation: heartFloat 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px #ff1493);
+}
+
+.magic-gifts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.magic-gift {
+  font-size: 32px;
+  border-radius: 18px;
+  padding: 15px;
+  transition: transform .25s;
+}
+
+.magic-gift:hover {
+  transform: translateY(-7px) scale(1.1);
+}
+
+#worldMessage {
+  min-height: 45px;
+  line-height: 2;
+  color: #ffb8dc;
+}
+
+@keyframes heartFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.08); }
+}
+
+@keyframes worldAppear {
+  from { opacity: 0; transform: scale(.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+#magicWorld {
+  position: relative;
+  overflow: hidden;
+}
+
+#worldStars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.world-star {
+  position: absolute;
+  color: #ffb8dc;
+  text-shadow: 0 0 8px #ff1493, 0 0 18px #ff1493;
+  animation: starTwinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+  from {
+    opacity: .2;
+    transform: scale(.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+#magicWorld > :not(#worldStars) {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+<script>
+(function () {
+  const enter = document.getElementById("enterWorld");
+  const world = document.getElementById("magicWorld");
+  const leave = document.getElementById("leaveWorld");
+  const message = document.getElementById("worldMessage");
+const originalButton = document.getElementById("openButton");
+
+originalButton.addEventListener("click", function () {
+  document.getElementById("surprise").classList.remove("show");
+
+  world.hidden = false;
+  enter.hidden = true;
+
+  world.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+});
+  enter.addEventListener("click", function () {
+    world.hidden = false;
+    enter.hidden = true;
+    world.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  leave.addEventListener("click", function () {
+    world.hidden = true;
+    enter.hidden = false;
+    enter.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  document.querySelectorAll(".magic-gift").forEach(function (gift) {
+    
+gift.addEventListener("click", function () {
+  message.textContent = gift.dataset.message;
+
+  message.animate(
+    [
+      { opacity: 0, transform: "scale(.8)" },
+      { opacity: 1, transform: "scale(1.05)" },
+      { opacity: 1, transform: "scale(1)" }
+    ],
+    { duration: 450, easing: "ease-out" }
+  );
+
+  gift.textContent = "💝";
+
+  const rect = gift.getBoundingClientRect();
+  const symbols = ["💗", "💕", "✨", "✦", "♡"];
+
+  for (let i = 0; i < 18; i++) {
+    const particle = document.createElement("span");
+
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    particle.style.position = "fixed";
+    particle.style.left = rect.left + rect.width / 2 + "px";
+    particle.style.top = rect.top + rect.height / 2 + "px";
+    particle.style.pointerEvents = "none";
+    particle.style.zIndex = "999";
+    particle.style.fontSize = (14 + Math.random() * 14) + "px";
+    particle.style.filter = "drop-shadow(0 0 8px #ff1493)";
+
+    document.body.appendChild(particle);
+
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 70 + Math.random() * 130;
+
+    const animation = particle.animate(
+      [
+        {
+          transform: "translate(-50%, -50%) scale(.3)",
+          opacity: 0
+        },
+        {
+          transform:
+            "translate(" +
+            Math.cos(angle) * distance +
+            "px, " +
+            Math.sin(angle) * distance +
+            "px) scale(1.2)",
+          opacity: 1,
+          offset: 0.6
+        },
+        {
+          transform:
+            "translate(" +
+            Math.cos(angle) * distance * 1.4 +
+            "px, " +
+            Math.sin(angle) * distance * 1.4 +
+            "px) scale(.2)",
+          opacity: 0
+        }
+      ],
+      {
+        duration: 1000 + Math.random() * 500,
+        easing: "ease-out"
+      }
+    );
+
+    animation.onfinish = function () {
+      particle.remove();
+    };
+  }
+});
+
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const sky = document.getElementById("worldStars");
+  if (!sky) return;
+
+  for (let i = 0; i < 35; i++) {
+    const star = document.createElement("span");
+
+    star.className = "world-star";
+    star.textContent = Math.random() > 0.5 ? "✦" : "✧";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.fontSize = (8 + Math.random() * 13) + "px";
+    star.style.animationDelay = Math.random() * 2 + "s";
+    star.style.animationDuration = (1 + Math.random() * 2) + "s";
+
+    sky.appendChild(star);
+  }
+})();
+</script>
+
+</body>
+</html>
